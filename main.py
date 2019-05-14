@@ -31,5 +31,5 @@ if __name__ =='__main__':
     seq1=[sq for i,sq in enumerate(seq) if dim[i]==1]
     print("average of dims")
     print("Poisson:",len(seq0)/T,len(seq1)/T)
-    print(mat(eye(len(mu))-alpha/beta).I*mat(mu).T)
-    print(mat(eye(len(pmu))-palpha/beta).I*mat(pmu).T)
+    print("true:",mat(eye(len(mu))-alpha/beta).I*mat(mu).T)
+    print("esimation:",mat(eye(len(pmu))-palpha/beta).I*mat(pmu).T)

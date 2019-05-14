@@ -9,6 +9,8 @@ import numpy as np
 from HawkesSimulationMD import HawkesSimulationMD
 from HawkesSimulation1D import HawkesSimulation1D
 from PPEM import PPMLE
+from numpy import *
+
 
 
 if __name__ =='__main__':

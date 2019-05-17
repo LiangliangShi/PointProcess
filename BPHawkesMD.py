@@ -10,7 +10,7 @@ import tensorflow as tf
 import numpy as np
 import random
 
-def caculateEGM(seqs,d,beta=1):
+def caculateEGM(seqs,dim,d,beta=1):
     n=len(seqs)
     dex=np.zeros([n,d,d])
     for i in range(1,len(seqs)):
@@ -76,7 +76,7 @@ if __name__ == '__main__':
     n = len(seqs)
     d = len(mu)
     model = BPPPMD(n,d)
-    dex,dimmu,Gddj=caculateEGM(seqs,d)
+    dex,dimmu,Gddj=caculateEGM(seqs,dim,d)
     ex1=dex.reshape([1,n,d,d])
     Gx1=Gddj.reshape([1,d,d])
     mux1=dimmu.reshape([1,n,d])
